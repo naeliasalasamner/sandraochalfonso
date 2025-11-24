@@ -1,0 +1,55 @@
+{
+    "nav": {
+      "celebration": "Ceremonia y Fiesta",
+      "familyspace": "Espacio familiar",
+      "language": "Idioma",
+      "dresscode": "Código de vestimenta",
+      "gifts": "Regalos",
+      "cocreate": "Co-creación",
+      "rsvp": "Confirmar asistencia"
+    },
+    "celebration": {
+      "title": "La celebración",
+      "text": "La fiesta y la ceremonia tendrán lugar en el acogedor invernadero del Café Backagården, Östra Kustvägen 987, 271 77 Löderup, a aproximadamente una hora en coche desde Malmö. Habrá un autobús que saldrá desde Malmö alrededor de la 1 p.m. (más información próximamente). Si vienes en tu propio coche, hay estacionamiento disponible. Comenzaremos con la ceremonia, que esperamos (si no llueve) se realice en el jardín alrededor de las 2:30 p.m. y durará aproximadamente una hora. Después habrá tiempo para fotos, brindis y tapas antes de la cena sentada a las 6:30 p.m. Al terminar la cena habrá baile, pastel y diversión hasta la 1 a.m."
+    },
+    "familyspace": {
+      "title": "Espacio familiar",
+      "text": "¡Los niños son más que bienvenidos, nos encanta tenerlos allí! Solo pedimos que estén preparados para cuidar de cualquier llanto o ruido durante la ceremonia. No habrá comida especial para niños ni actividades organizadas, pero sí un ambiente amable y acogedor. Si tienes alguna pregunta, no dudes en contactarnos."
+    },
+    "language": {
+      "title": "Idioma",
+      "text": "Como nuestra historia de amor es una mezcla de dos idiomas, queremos que nuestra boda refleje eso y que todos se sientan incluidos. Por eso, la ceremonia será en inglés con traducción al español. Esto hará que sea un poco más larga, pero esperamos que contribuya a crear un espacio más tranquilo y profundo. Para los discursos durante la cena: por favor escribe tu discurso y envíalo a XXXXX una semana antes de la boda para poder traducirlo. También puedes hablar espontáneamente desde el corazón, pero así todos podrán entenderte."
+    },
+    "dresscode": {
+      "title": "Código de vestimenta",
+      "text": "Vístete con lo que te haga sentir más guapo o guapa (puedes usar esmoquin o vestido de gala, pero no más bonito que la novia ni de color blanco :) Trae algo abrigado para la noche, especialmente si vienes del sur. Los veranos suecos son muy luminosos y agradables, pero suelen rondar los 18 grados. Estaremos sobre césped, así que evita los tacones (¡queremos verte bailar!)."
+    },
+    "gifts": {
+      "title": "Regalos",
+      "text": "¡No queremos regalos envueltos! Lo que más deseamos es tu presencia en la boda y, si lo deseas, una contribución para nuestra luna de miel (Swish + información bancaria) con la nota 'love story'."
+    },
+    "cocreate": {
+      "title": "Co-creación",
+      "text": "Nos encantaría que te sintieras parte de la celebración y, tal vez, ¡nos sorprendas! :) Habrá espacio para traer un pequeño juego, una canción que quieras cantar o algo simbólico que quieras ofrecer durante la noche. También habrá posibilidad de dar un discurso durante la cena (¡nos encantan los discursos!). Si quieres participar, por favor contacta a XXXXX que nos ayudará a organizarlo."
+    },
+    "rsvp": {
+      "title": "Confirmar asistencia",
+      "form": {
+        "name": "Nombre",
+        "allergies": "Alergias",
+        "specialDiet": "Dieta especial (por ejemplo, vegana, vegetariana, sin gluten)",
+        "drink": "Elección de bebida",
+        "drinkAlcohol": "Con alcohol",
+        "drinkAlcoholFree": "Sin alcohol",
+        "busRide": "¿Necesitas transporte en autobús desde/hacia Malmö?",
+        "yes": "Sí",
+        "no": "No",
+        "musicWishes": "Petición de canciones (máx. 3)",
+        "sleepOver": "¿Quieres quedarte a dormir?",
+        "van": "Vendré con mi furgoneta",
+        "deadline": "Último día para avisarnos",
+        "submit": "Enviar"
+      }
+    }
+  }
+  

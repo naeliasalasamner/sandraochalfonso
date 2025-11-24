@@ -1,0 +1,55 @@
+{
+    "nav": {
+      "celebration": "Celebration",
+      "familyspace": "Family space",
+      "language": "Language",
+      "dresscode": "Dresscode",
+      "gifts": "Gifts",
+      "cocreate": "Co-creation",
+      "rsvp": "RSVP"
+    },
+    "celebration": {
+      "title": "The celebration",
+      "text": "The party and ceremony will take place in the cute greenhouse of Backagården Cafe, Östra Kustvägen 987, 271 77 Löderup, around 1h drive from Malmö. A bus will be going from Malmö around 1pm (more info about this will come). If you drive with your own car there is a parking space at the venue. We will start with the ceremony, which hopefully (if it isn't raining) will take place in the garden around 2.30pm and go on for an hour. After that there will be space for photos, cheers and mingle with loads of tapas and drinks before the seated dinner around 6.30pm. When the dinner is finished we will have dancing, cake and coziness until 1am."
+    },
+    "familyspace": {
+      "title": "Family space",
+      "text": "Your children are super welcome to join us, we love to have them there! Just please be prepared to take care of possible crying and screaming during the ceremony. There will not be any special food for children or held activities but a friendly atmosphere. If you have questions about this, just connect with us."
+    },
+    "language": {
+      "title": "Language",
+      "text": "Since our love story is a mix of two languages our wedding will represent this and it is really important for us that everyone feels included. Therefore we will hold the ceremony in English with a Spanish translation. This will make everything a bit longer but we hope this will contribute to the space and offer a possibility for more slowness and depth. For speeches during the dinner: you will need to write down your speech and send it to XXXXX one week before the wedding so that it can be translated to the other language. You can always speak from your heart in the moment but then at least everyone gets a chance to hear you."
+    },
+    "dresscode": {
+      "title": "Dresscode",
+      "text": "Whatever you feel the most beautiful in (feel free to have tuxedo and gala dresses, but not more beautiful than the bride or white :) Bring something warmer for the evening, especially if you are from the south! Swedish summers are very bright and lovely but can be around 18 degrees. We are going to be on grass so don’t bring heels (also we want to see you on the dancefloor!)."
+    },
+    "gifts": {
+      "title": "Gifts",
+      "text": "We do not wish for any wrapped gifts! We wish for your presence in the wedding and a contribution for our honeymoon (Swish + bank info) marked with 'love story'!"
+    },
+    "cocreate": {
+      "title": "Co-create",
+      "text": "We would love for you to feel included and participate in the celebration, and maybe even have a surprise for us :) There will be some open space for you to bring a little game, song you want to sing or a ceremonial thing you wish to offer during the evening. There is also a possibility to hold a speech during the dinner (we really love this!). If you wish to do either, please contact: XXXXXX who will help us organize it."
+    },
+    "rsvp": {
+      "title": "RSVP",
+      "form": {
+        "name": "Name",
+        "allergies": "Allergies",
+        "specialDiet": "Special diet (vegan, vegetarian, gluten-free)",
+        "drink": "Drink preference",
+        "drinkAlcohol": "Alcohol",
+        "drinkAlcoholFree": "Alcohol-free",
+        "busRide": "Do you need a ride from/to Malmö?",
+        "yes": "Yes",
+        "no": "No",
+        "musicWishes": "Music wishes (max 3 songs)",
+        "sleepOver": "Do you want to stay overnight?",
+        "van": "I will come with my van",
+        "deadline": "Last date to notify us",
+        "submit": "Send"
+      }
+    }
+  }
+  
