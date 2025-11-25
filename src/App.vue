@@ -1,13 +1,19 @@
-
-
 <script setup lang="ts">
+import { ref } from 'vue'
+import LandingPage from './components/LandingPage.vue'
 import Home from './components/Home.vue'
+
+const showLanding = ref(true)
+
+function enterSite() {
+  showLanding.value = false
+}
 </script>
 
 <template>
-  <Home />
+  <LandingPage v-if="showLanding" @enter="enterSite" />
+  <Home v-else />
 </template>
-
 
 <style scoped>
 .logo {

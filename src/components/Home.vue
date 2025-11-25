@@ -29,22 +29,23 @@ function setLanguage(lang: string) {
 
 
 <template>
-<div class="lang-buttons">
-      <button
-        v-for="lang in languages"
-        :key="lang.code"
-        :class="{ active: locale === lang.code }"
-        @click="setLanguage(lang.code)"
-      >
-        {{ lang.label }}
-      </button>
-    </div>
+  <div class="lang-buttons">
+    <button
+      v-for="lang in languages"
+      :key="lang.code"
+      :class="{ active: locale === lang.code }"
+      @click="setLanguage(lang.code)"
+    >
+      {{ lang.label }}
+    </button>
+  </div>
 
   <div class="text-box">
     <img src="../../public/images/Sandra&Alfonso.png" 
      alt="Sandra & Alfonso" 
      style="height: 8em; width: auto;" />
-         <p>Malmö – 12 juni 2026</p>
+     <p>YOU'RE INVITED TO BE PART IN THE CELEBRATION OF OUR LOVE STORY</p>
+    <p>Malmö – 12 juni 2026</p>
   </div>
 
   <header class="hero-header">
@@ -62,59 +63,73 @@ function setLanguage(lang: string) {
   </nav>
   
   <div class="info-text">
-    <section id="celebration">
-      <h2>{{ t('celebration.title') }}</h2>
-      <p>{{ t('celebration.text') }}</p>
-      <div  class="hero-header" >
-        <img src="../../public/images/vigselPlatsTwo.jpg" alt="Sandra & Alfonso" />
+    <!-- Section 1: Bild VÄNSTER, text höger -->
+    <section id="celebration" class="alternating-section">
+      <div class="section-image left">
+        <img src="../../public/images/vigselPlatsTwo.jpg" alt="Sandra & Alfonso" class="img-medium" />
+      </div>
+      <div class="section-text">
+        <h2>{{ t('celebration.title') }}</h2>
+        <p>{{ t('celebration.text') }}</p>
       </div>
     </section>
 
-    <section id="familyspace">
-      <h2>{{ t('familyspace.title') }}</h2>
-      <p>{{ t('familyspace.text') }}
-      </p>
-      <div  class="hero-header" >
-        <img src="../../public/images/barn.jpg" alt="barn" />
-      </div>    
+    <!-- Section 2: Text vänster, bild HÖGER -->
+    <section id="familyspace" class="alternating-section">
+      <div class="section-text">
+        <h2>{{ t('familyspace.title') }}</h2>
+        <p>{{ t('familyspace.text') }}</p>
+      </div>
+      <div class="section-image right">
+        <img src="../../public/images/barn.jpg" alt="barn" class="img-small" />
+      </div>
     </section>
 
-    <section id="language">
-      <h2>{{ t('language.title') }}</h2>
-      <p>{{ t('language.text') }} </p>
-      <div  class="hero-header" >
-        <img src="../../public/images/goodToKnow.jpg" alt="Sandra & Alfonso" />
+    <!-- Section 3: Bild VÄNSTER, text höger -->
+    <section id="language" class="alternating-section">
+      <div class="section-image left">
+        <img src="../../public/images/goodToKnow.jpg" alt="Sandra & Alfonso" class="img-large" />
+      </div>
+      <div class="section-text">
+        <h2>{{ t('language.title') }}</h2>
+        <p>{{ t('language.text') }}</p>
       </div>
     </section>
   
-    <section id="dresscode">
-      <h2>{{ t('dresscode.title') }}</h2>
-      <p>{{ t('language.text') }}</p>
-      <div  class="hero-header" >
-        <img src="../../public/images/dresscode.jpeg" alt="Sandra & Alfonso" />
+    <!-- Section 4: Text vänster, bild HÖGER -->
+    <section id="dresscode" class="alternating-section">
+      <div class="section-text">
+        <h2>{{ t('dresscode.title') }}</h2>
+        <p>{{ t('dresscode.text') }}</p>
+      </div>
+      <div class="section-image right">
+        <img src="../../public/images/dresscode.jpeg" alt="Sandra & Alfonso" class="img-small" />
       </div>
     </section>
   
-  
-    <section id="gifts">
-      <h2>{{ t('gifts.title') }}</h2>
-      <p>{{ t('gifts.text') }}</p>
-      <div  class="hero-header" >
-        <img src="../../public/images/gifts.jpg" alt="Sandra & Alfonso" />
-      </div>    
+    <!-- Section 5: Bild VÄNSTER, text höger -->
+    <section id="gifts" class="alternating-section">
+      <div class="section-image left">
+        <img src="../../public/images/gifts.jpg" alt="Sandra & Alfonso" class="img-medium" />
+      </div>
+      <div class="section-text">
+        <h2>{{ t('gifts.title') }}</h2>
+        <p>{{ t('gifts.text') }}</p>
+      </div>
     </section>
 
-    <section id="cocreate">
-      <h2>{{ t('cocreate.title') }}</h2>
-      <p>{{ t('cocreate.text') }} </p>
-      <div  class="hero-header" >
-        <img src="../../public/images/gifts.jpg" alt="Sandra & Alfonso" />
-      </div>    
+    <!-- Section 6: Text vänster, bild HÖGER -->
+    <section id="cocreate" class="alternating-section">
+      <div class="section-text">
+        <h2>{{ t('cocreate.title') }}</h2>
+        <p>{{ t('cocreate.text') }}</p>
+      </div>
+      <div class="section-image right">
+        <img src="../../public/images/gifts.jpg" alt="Sandra & Alfonso" class="img-large" />
+      </div>
     </section>
   </div>
   
-  <div class="info-text">
-  </div>
   <section id="RSVP">
     <h2>{{ t('rsvp.title') }}</h2>
     <form @submit.prevent="" class="osa-form">
@@ -189,66 +204,13 @@ function setLanguage(lang: string) {
 
       <label>
         {{ t('rsvp.form.deadline') }}
-        <!-- <input v-model="form.deadline" type="date" /> -->
       </label>
 
       <button type="submit">{{ t('rsvp.form.submit') }}</button>
     </form>
-</section>
-
-  <!-- <section id="RSVP">
-    <h2>{{ t('rsvp.title') }}</h2>
-    <form @submit.prevent="" class="osa-form">
-      <label>
-        {{ t('rsvp.form.name') }}:
-        <input v-model="form.name" type="text" required />
-      </label>
-
-      <label>
-        {{ t('rsvp.form.allergies') }}:
-        <input v-model="form.allergies" type="text" />
-      </label>
-
-      <label>
-        {{ t('rsvp.form.specialDiet') }}:
-         <input v-model="form.specialDiet" type="text" />
-      </label>
-
-      <fieldset>
-        <legend>{{ t('rsvp.form.drink') }}:</legend>
-        <label><input type="radio" value="alcohol" v-model="form.drink" />{{ t('rsvp.form.drinkAlcohol') }}:</label>
-        <label><input type="radio" value="alcoholFree" v-model="form.drink" />{{ t('rsvp.form.drinkAlcoholFree') }}</label>
-      </fieldset>
-
-      <fieldset>
-        <legend> {{ t('rsvp.form.busRide') }}</legend>
-        <label><input type="radio" value="yes" v-model="form.busRide" /> {{ t('rsvp.form.yes') }}</label>
-        <label><input type="radio" value="no" v-model="form.busRide" /> {{ t('rsvp.form.no') }}</label>
-      </fieldset>
-
-      <label>
-        {{ t('rsvp.form.musicWishes') }}
-          <div v-for="(song, index) in form.musicWishes" :key="index">
-          <input v-model="form.musicWishes[index]" type="text" placeholder="Låtnamn" />
-        </div>
-      </label>
-
-      <fieldset>
-        <legend>{{ t('rsvp.form.sleepOver') }}</legend>
-        <label><input type="radio" value="yes" v-model="form.sleepOver" /> {{ t('rsvp.form.yes') }}</label>
-        <label><input type="radio" value="no" v-model="form.sleepOver" /> {{ t('rsvp.form.no') }}</label>
-        <label><input type="radio" value="van" v-model="form.sleepOver" /> {{ t('rsvp.form.van') }}n</label>
-      </fieldset>
-
-      <label>
-        {{ t('rsvp.form.deadline') }}        
-        <input v-model="form.deadline" type="date" />
-      </label>
-
-      <button type="submit">{{ t('rsvp.form.submit') }}</button>
-    </form>
-  </section> -->
+  </section>
 </template>
+
  
 
 <style src="../assets/style.css">
