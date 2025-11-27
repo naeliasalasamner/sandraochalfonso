@@ -1,8 +1,10 @@
 <script setup lang="ts">
 import { reactive } from 'vue'
-import { useI18n } from 'vue-i18n'  
+import { useI18n } from 'vue-i18n'
 
-const { t, locale } = useI18n()     
+const { t, locale } = useI18n()
+
+const RSVP_FORM_EMBED_URL = 'https://forms.gle/mLLFahRTtnUHasW69'
 
 const form = reactive({
   name: '',
@@ -30,21 +32,15 @@ function setLanguage(lang: string) {
 
 <template>
   <div class="lang-buttons">
-    <button
-      v-for="lang in languages"
-      :key="lang.code"
-      :class="{ active: locale === lang.code }"
-      @click="setLanguage(lang.code)"
-    >
+    <button v-for="lang in languages" :key="lang.code" :class="{ active: locale === lang.code }"
+      @click="setLanguage(lang.code)">
       {{ lang.label }}
     </button>
   </div>
 
   <div class="text-box">
-    <img src="../../public/images/Sandra&Alfonso.png" 
-     alt="Sandra & Alfonso" 
-     style="height: 8em; width: auto;" />
-     <p>YOU'RE INVITED TO BE PART IN THE CELEBRATION OF OUR LOVE STORY</p>
+    <img src="../../public/images/Sandra&Alfonso.png" alt="Sandra & Alfonso" style="height: 8em; width: auto;" />
+    <p>YOU'RE INVITED TO BE PART IN THE CELEBRATION OF OUR LOVE STORY</p>
     <p>Malmö – 12 juni 2026</p>
   </div>
 
@@ -61,7 +57,7 @@ function setLanguage(lang: string) {
     <a href="#cocreate">{{ t('nav.cocreate') }}</a>
     <a href="#RSVP">{{ t('nav.rsvp') }}</a>
   </nav>
-  
+
   <div class="info-text">
     <!-- Section 1: Bild VÄNSTER, text höger -->
     <section id="celebration" class="alternating-section">
@@ -95,7 +91,7 @@ function setLanguage(lang: string) {
         <p>{{ t('language.text') }}</p>
       </div>
     </section>
-  
+
     <!-- Section 4: Text vänster, bild HÖGER -->
     <section id="dresscode" class="alternating-section">
       <div class="section-text">
@@ -106,7 +102,7 @@ function setLanguage(lang: string) {
         <img src="../../public/images/dresscode.jpeg" alt="Sandra & Alfonso" class="img-small" />
       </div>
     </section>
-  
+
     <!-- Section 5: Bild VÄNSTER, text höger -->
     <section id="gifts" class="alternating-section">
       <div class="section-image left">
@@ -129,91 +125,26 @@ function setLanguage(lang: string) {
       </div>
     </section>
   </div>
-  
-  <section id="RSVP">
-    <h2>{{ t('rsvp.title') }}</h2>
-    <form @submit.prevent="" class="osa-form">
-      
-      <label>
-        {{ t('rsvp.form.name') }}
-        <input v-model="form.name" type="text" required placeholder="Ditt namn" />
-      </label>
 
-      <label>
-        {{ t('rsvp.form.allergies') }}
-        <input v-model="form.allergies" type="text" placeholder="T.ex. nötter, gluten..." />
-      </label>
-
-      <label>
-        {{ t('rsvp.form.specialDiet') }}
-        <input v-model="form.specialDiet" type="text" placeholder="T.ex. vegetarisk, vegan..." />
-      </label>
-
-      <fieldset>
-        <legend>{{ t('rsvp.form.drink') }}</legend>
-        <label>
-          <input type="radio" value="alcohol" v-model="form.drink" />
-          {{ t('rsvp.form.drinkAlcohol') }}
-        </label>
-        <label>
-          <input type="radio" value="alcoholFree" v-model="form.drink" />
-          {{ t('rsvp.form.drinkAlcoholFree') }}
-        </label>
-      </fieldset>
-
-      <fieldset>
-        <legend>{{ t('rsvp.form.busRide') }}</legend>
-        <label>
-          <input type="radio" value="yes" v-model="form.busRide" />
-          {{ t('rsvp.form.yes') }}
-        </label>
-        <label>
-          <input type="radio" value="no" v-model="form.busRide" />
-          {{ t('rsvp.form.no') }}
-        </label>
-      </fieldset>
-
-      <label>
-        {{ t('rsvp.form.musicWishes') }}
-        <div class="music-wishes-container">
-          <input 
-            v-for="(song, index) in form.musicWishes" 
-            :key="index"
-            v-model="form.musicWishes[index]" 
-            type="text" 
-            :placeholder="`Låt ${index + 1}`" 
-          />
-        </div>
-      </label>
-
-      <fieldset>
-        <legend>{{ t('rsvp.form.sleepOver') }}</legend>
-        <label>
-          <input type="radio" value="yes" v-model="form.sleepOver" />
-          {{ t('rsvp.form.yes') }}
-        </label>
-        <label>
-          <input type="radio" value="no" v-model="form.sleepOver" />
-          {{ t('rsvp.form.no') }}
-        </label>
-        <label>
-          <input type="radio" value="van" v-model="form.sleepOver" />
-          {{ t('rsvp.form.van') }}
-        </label>
-      </fieldset>
-
-      <label>
-        {{ t('rsvp.form.deadline') }}
-      </label>
-
-      <button type="submit">{{ t('rsvp.form.submit') }}</button>
-    </form>
+  <section id="RSVP" class="rsvp-section">
+    <!-- <h2>{{ t('rsvp.title') }}</h2> -->
+    <!-- <p class="rsvp-description">{{ t('rsvp.description') }}</p> -->
+    
+    <div class="form-container">
+      <iframe 
+        :src="RSVP_FORM_EMBED_URL"
+        width="100%" 
+        height="1400" 
+        frameborder="0" 
+        marginheight="0" 
+        marginwidth="0"
+      >
+        Läser in formulär…
+      </iframe>
+    </div>
   </section>
 </template>
 
- 
 
-<style src="../assets/style.css">
 
-</style>
-
+<style src="../assets/style.css"></style>
