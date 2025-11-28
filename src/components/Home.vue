@@ -1,26 +1,13 @@
 <script setup lang="ts">
-import { reactive } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 const { t, locale } = useI18n()
 
 const RSVP_FORM_EMBED_URL = 'https://forms.gle/mLLFahRTtnUHasW69'
 
-const form = reactive({
-  name: '',
-  allergies: '',
-  specialDiet: '',
-  drink: '',
-  busRide: '',
-  musicWishes: ['', '', ''],
-  sleepOver: '',
-  deadline: ''
-})
-
 const languages = [
   { code: 'en', label: 'EN' },
   { code: 'es', label: 'ES' },
-  { code: 'sv', label: 'SV' }
 ]
 
 function setLanguage(lang: string) {
