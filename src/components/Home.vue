@@ -46,7 +46,6 @@ function setLanguage(lang: string) {
   </nav>
 
   <div class="info-text">
-    <!-- Section 1: Bild VÄNSTER, text höger -->
     <section id="celebration" class="alternating-section">
       <div class="section-image left">
         <img src="../../public/images/vigselPlatsTwo.jpg" alt="Sandra & Alfonso" class="img-medium" />
@@ -57,7 +56,6 @@ function setLanguage(lang: string) {
       </div>
     </section>
 
-    <!-- Section 2: Text vänster, bild HÖGER -->
     <section id="familyspace" class="alternating-section">
       <div class="section-text">
         <h2>{{ t('familyspace.title') }}</h2>
@@ -68,7 +66,6 @@ function setLanguage(lang: string) {
       </div>
     </section>
 
-    <!-- Section 3: Bild VÄNSTER, text höger -->
     <section id="language" class="alternating-section">
       <div class="section-image left">
         <img src="../../public/images/goodToKnow.jpg" alt="Sandra & Alfonso" class="img-large" />
@@ -79,7 +76,6 @@ function setLanguage(lang: string) {
       </div>
     </section>
 
-    <!-- Section 4: Text vänster, bild HÖGER -->
     <section id="dresscode" class="alternating-section">
       <div class="section-text">
         <h2>{{ t('dresscode.title') }}</h2>
