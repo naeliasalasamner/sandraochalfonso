@@ -104,7 +104,7 @@ function setLanguage(lang: string) {
         <p>{{ t('cocreate.text') }}</p>
       </div>
       <div class="section-image right">
-        <img src="../../public/images/gifts.jpg" alt="Sandra & Alfonso" class="img-large" />
+        <img src="../../public/images/cocreate.jpg" alt="Sandra & Alfonso" class="img-large" />
       </div>
     </section>
   </div>
@@ -131,3 +131,20 @@ function setLanguage(lang: string) {
 
 
 <style src="../assets/style.css"></style>
+
+<!-- <iframe :src="RSVP_FORM_EMBED_URL" 
+        width="100%" 
+        height="300" 
+        frameborder="0" 
+        marginheight="0" 
+        marginwidth="0"
+        id="google-form">
+</iframe> -->
+
+<style>
+#form-container {
+    margin-bottom: 200px; 
+    overflow: hidden;
+    background: red;
+}
+</style>
