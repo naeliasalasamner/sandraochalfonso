@@ -62,8 +62,8 @@ function handleFlowerClick() {
   left: 0;
   width: 100vw;
   height: 100vh;
-  /* background: linear-gradient(135deg, rgb(243, 230, 157) 0%, rgb(249, 241, 151) 100%); */
-  background: rgb(197, 194, 184);
+  background: rgb(224, 221, 213);
+  /* background: rgb(197, 194, 184); */
   display: flex;
   justify-content: center;
   align-items: center;

@@ -1,14 +1,25 @@
 <script setup lang="ts">
+// import { reactive } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 const { t, locale } = useI18n()
 
 const RSVP_FORM_EMBED_URL = 'https://forms.gle/mLLFahRTtnUHasW69'
 
+// const form = reactive({
+//   name: '',
+//   allergies: '',
+//   specialDiet: '',
+//   drink: '',
+//   busRide: '',
+//   musicWishes: ['', '', ''],
+//   sleepOver: '',
+//   deadline: ''
+// })
+
 const languages = [
   { code: 'en', label: 'EN' },
-  { code: 'es', label: 'ES' },
-]
+  { code: 'es', label: 'ES' }]
 
 function setLanguage(lang: string) {
   locale.value = lang
@@ -18,17 +29,16 @@ function setLanguage(lang: string) {
 
 
 <template>
-  <div class="lang-buttons">
-    <button v-for="lang in languages" :key="lang.code" :class="{ active: locale === lang.code }"
-      @click="setLanguage(lang.code)">
-      {{ lang.label }}
-    </button>
-  </div>
-
-  <div class="text-box">
-    <img src="../../public/images/Sandra&Alfonso.png" alt="Sandra & Alfonso" style="height: 8em; width: auto;" />
-    <p>YOU'RE INVITED TO BE PART IN THE CELEBRATION OF OUR LOVE STORY</p>
-    <p>Malmö – 12 juni 2026</p>
+   <div class="text-box">
+    <img
+      src="../../public/images/Sandra&Alfonso.png"
+      alt="Sandra & Alfonso"
+      style="height: 8em; width: auto;"
+    />
+    <div class="text-box-content">
+      <p class="hero-subtitle">{{ t('hero.subtitle') }}</p>
+      <p class="hero-meta">{{ t('hero.meta') }}</p>
+    </div>
   </div>
 
   <header class="hero-header">
@@ -36,26 +46,42 @@ function setLanguage(lang: string) {
   </header>
 
   <nav>
-    <a href="#celebration">{{ t('nav.celebration') }}</a>
-    <a href="#familyspace">{{ t('nav.familyspace') }}</a>
-    <a href="#language">{{ t('nav.language') }}</a>
-    <a href="#dresscode">{{ t('nav.dresscode') }}</a>
-    <a href="#gifts">{{ t('nav.gifts') }}</a>
-    <a href="#cocreate">{{ t('nav.cocreate') }}</a>
-    <a href="#RSVP">{{ t('nav.rsvp') }}</a>
+    <div class="nav-links">
+      <a href="#celebration">{{ t('nav.celebration') }}</a>
+      <a href="#familyspace">{{ t('nav.familyspace') }}</a>
+      <a href="#language">{{ t('nav.language') }}</a>
+      <a href="#dresscode">{{ t('nav.dresscode') }}</a>
+      <a href="#gifts">{{ t('nav.gifts') }}</a>
+      <a href="#cocreate">{{ t('nav.cocreate') }}</a>
+      <a href="#RSVP">{{ t('nav.rsvp') }}</a>
+    </div>
+    
+    <div class="lang-buttons">
+      <button
+        v-for="lang in languages"
+        :key="lang.code"
+        :class="{ active: locale === lang.code }"
+        @click="setLanguage(lang.code)"
+      >
+        {{ lang.label }}
+      </button>
+    </div>
   </nav>
 
   <div class="info-text">
+    <!-- Section 1: Bild VÄNSTER, text höger -->
     <section id="celebration" class="alternating-section">
-      <div class="section-image left">
-        <img src="../../public/images/vigselPlatsTwo.jpg" alt="Sandra & Alfonso" class="img-medium" />
-      </div>
-      <div class="section-text">
-        <h2>{{ t('celebration.title') }}</h2>
-        <p>{{ t('celebration.text') }}</p>
-      </div>
-    </section>
+  <div class="section-image left">
+    <img src="../../public/images/vigselPlatsTwo.jpg" alt="Sandra & Alfonso" class="img-medium" />
+  </div>
+  <div class="section-text">
+    <h2>{{ t('celebration.title') }}</h2>
+    <div class="celebration-text" v-html="t('celebration.text')"></div>
+  </div>
+</section>
 
+
+    <!-- Section 2: Text vänster, bild HÖGER -->
     <section id="familyspace" class="alternating-section">
       <div class="section-text">
         <h2>{{ t('familyspace.title') }}</h2>
@@ -66,6 +92,7 @@ function setLanguage(lang: string) {
       </div>
     </section>
 
+    <!-- Section 3: Bild VÄNSTER, text höger -->
     <section id="language" class="alternating-section">
       <div class="section-image left">
         <img src="../../public/images/goodToKnow.jpg" alt="Sandra & Alfonso" class="img-large" />
@@ -76,6 +103,7 @@ function setLanguage(lang: string) {
       </div>
     </section>
 
+    <!-- Section 4: Text vänster, bild HÖGER -->
     <section id="dresscode" class="alternating-section">
       <div class="section-text">
         <h2>{{ t('dresscode.title') }}</h2>
@@ -109,11 +137,10 @@ function setLanguage(lang: string) {
     </section>
   </div>
 
-  <section id="RSVP" class="rsvp-section">
-    <!-- <h2>{{ t('rsvp.title') }}</h2> -->
-    <!-- <p class="rsvp-description">{{ t('rsvp.description') }}</p> -->
+<section id="RSVP" class="rsvp-section"> 
+   <h2>{{ t('rsvp.title') }}</h2> 
     
-    <div class="form-container">
+   <div class="form-container">
       <iframe 
         :src="RSVP_FORM_EMBED_URL"
         width="100%" 
@@ -125,26 +152,24 @@ function setLanguage(lang: string) {
         Läser in formulär…
       </iframe>
     </div>
-  </section>
+  </section> 
 </template>
 
 
 
 <style src="../assets/style.css"></style>
+<style scoped>
+.celebration-text :deep(ul) {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
 
-<!-- <iframe :src="RSVP_FORM_EMBED_URL" 
-        width="100%" 
-        height="300" 
-        frameborder="0" 
-        marginheight="0" 
-        marginwidth="0"
-        id="google-form">
-</iframe> -->
+.celebration-text :deep(li) {
+  list-style: none;
+}
 
-<style>
-#form-container {
-    margin-bottom: 200px; 
-    overflow: hidden;
-    background: red;
+.celebration-text :deep(li::marker) {
+  display: none;
 }
 </style>

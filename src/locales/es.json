@@ -3,21 +3,32 @@
     "subtitle": "Bienvenidas y bienvenidos a la celebración de nuestra historia de amor",
     "meta": "Malmö · 12 de junio de 2026"
   },
+  "nav": {
+    "celebration": "Celebración",
+    "familyspace": "Espacio familiar",
+    "language": "Idioma",
+    "dresscode": "Código de vestido",
+    "gifts": "Regalos",
+    "cocreate": "Co-crear",
+    "rsvp": "RSVP"
+  },
+
   "lovestory": {
     "title": "Nuestra historia de amor",
     "text": "Nuestra historia de amor comenzó hace seis años y ahora ha llegado el día: ¡nuestra boda! Esta página de nuestra historia simboliza y sostiene la intención de formar una familia y la alegría de compartir una vida. En este camino hemos descubierto un amor más profundo que sale a la superficie, algo que nos emociona llevar a ceremonia. Seguimos redescubriendo nuestro camino en la vida, en lo pequeño y en lo grande. ¡Y aquí estamos!"
   },
-  "celebration": {
-    "title": "La celebración",
-    "text": "La fiesta y la ceremonia tendrán lugar en el acogedor invernadero de Backagården Café, Östra Kustvägen 987, 271 77 Löderup, a aproximadamente 1 hora en coche desde Malmö.\n\n12:30–14:00 Autobús desde Malmö al lugar (más información sobre esto llegará más adelante). Si vienes en tu propio coche, hay aparcamiento en el lugar.\n14:30–15:30 La ceremonia, que esperamos (si no llueve) realizar en el jardín.\n15:30–16:00 Espacio para fotos y brindis con las personas recién casadas.\n16:00–18:00 Cóctel y encuentro informal con muchas tapas y bebidas en el jardín (si el clima lo permite).\n18:30–20:00 Cena sentadas/os con brindis.\n20:00–22:00 Espacio abierto para actividades sorpresa.\n22:00–01:00 Baile, pastel y momentos acogedores.\n01:30–03:00 Autobús de regreso a Malmö."
-  },
+ "celebration": {
+  "title": "La celebración",
+  "text": "<p>La fiesta y la ceremonia tendrán lugar en el acogedor invernadero de Backagården Café, Östra Kustvägen 987, 271 77 Löderup, a aproximadamente 1 hora en coche desde Malmö.</p><p>Aquí está el flujo aproximado del día:</p><ul><li><strong>12:30–14:00</strong> Autobús desde Malmö al lugar (más información sobre esto llegará más adelante). Si vienes en tu propio coche, hay aparcamiento en el lugar.</li><li><strong>14:30–15:30</strong> La ceremonia, que esperamos (si no llueve) realizar en el jardín.</li><li><strong>15:30–16:00</strong> Espacio para fotos y brindis con las personas recién casadas.</li><li><strong>16:00–18:00</strong> Cóctel y encuentro informal con muchas tapas y bebidas en el jardín (si el clima lo permite).</li><li><strong>18:30–20:00</strong> Cena sentadas/os con brindis.</li><li><strong>20:00–22:00</strong> Espacio abierto para actividades sorpresa.</li><li><strong>22:00–01:00</strong> Baile, pastel y momentos acogedores.</li><li><strong>01:30–03:00</strong> Autobús de regreso a Malmó.</li></ul>"
+}
+,
   "familyspace": {
     "title": "Espacio para familias",
     "text": "¡Sus hijas e hijos son muy bienvenidos, nos encanta tenerles con nosotras/os! Solo les pedimos que estén preparadas/os para atender posibles llantos o gritos durante la ceremonia. No habrá comida especial para niñas/os ni actividades organizadas, pero sí un ambiente cercano y amable. Si tienen preguntas sobre esto, no duden en contactarnos."
   },
   "language": {
     "title": "Idioma",
-    "text": "Como nuestra historia de amor es una mezcla de dos idiomas, nuestra boda también lo será, y es muy importante para nosotras/os que todas las personas se sientan incluidas. Por eso, la ceremonia será en inglés y en español. Esto hará que todo sea un poco más largo, pero esperamos que contribuya al espacio y ofrezca una posibilidad de más calma y profundidad.\n\nDiscursos: Habrá posibilidad de hacer un discurso durante la cena (¡nos encanta!). Si quieres hacerlo, por favor escríbelo y envíalo a XXXXX dos semanas antes de la boda para que podamos traducirlo por escrito. Siempre puedes hablar desde el corazón en el momento, pero así al menos todas las personas tienen la oportunidad de entender lo que dices."
+    "text": "Como nuestra historia de amor es una mezcla de dos idiomas; nuestra boda también lo será, y es muy importante para nosotras/os que todas las personas se sientan incluidas. Por eso, la ceremonia será en inglés y en español. Esto hará que todo sea un poco más largo, pero esperamos que contribuya al espacio y ofrezca una posibilidad de más calma y profundidad.\n\nDiscursos: Habrá posibilidad de hacer un discurso durante la cena (¡nos encanta!). Si quieres hacerlo, por favor escríbelo y envíalo a XXXXX dos semanas antes de la boda para que podamos traducirlo por escrito. Siempre puedes hablar desde el corazón en el momento, pero así al menos todas las personas tienen la oportunidad de entender lo que dices."
   },
   "dresscode": {
     "title": "Código de vestimenta",
@@ -34,14 +45,5 @@
   "afterglow": {
     "title": "Tres días de celebración – Afterglow y encuentro",
     "text": "Algunas/os de ustedes han viajado desde lejos o hace mucho que no nos vemos, y nos gustaría crear un poco más de tiempo para estar juntas/os y disfrutar del afterglow. La celebración terminará alrededor de la 1 de la madrugada y un autobús llevará a todas las personas de vuelta a Malmö. Pero, si quieres y puedes quedarte hasta el día 14, te invitamos a venir a nuestra casa en Malmö (sábado y domingo). Tal vez organicemos un brunch en la ciudad y luego volvamos a nuestro jardín para pasar el rato (jugar juegos, tomar café o cerveza, charlar, estar cómodas/os, ir a la sauna… el cielo es el límite) o, si hace muy buen tiempo, ir a la playa, nadar y pedir unas pizzas por la noche. Vivimos en Ljunggatan 28, así que puedes reservar un alojamiento cerca y fluir con el afterglow. Solo avísanos si tienes cualquier pregunta."
-  },
-  "nav": {
-    "celebration": "Celebración",
-    "familyspace": "Espacio familiar",
-    "language": "Idioma",
-    "dresscode": "Código de vestimenta",
-    "gifts": "Regalos",
-    "cocreate": "Co-crear",
-    "rsvp": "RSVP"
   }
 }
