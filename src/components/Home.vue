@@ -1,29 +1,22 @@
 <script setup lang="ts">
-// import { reactive } from 'vue'
-import { onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 
-const { t, locale } = useI18n()
-
-const RSVP_FORM_EMBED_URL = 'https://forms.gle/mLLFahRTtnUHasW69'
+const { t, locale } = useI18n()   
 
 const languages = [
   { code: 'en', label: 'EN' },
-  { code: 'es', label: 'ES' }]
+  { code: 'es', label: 'ES' }
+]
 
 function setLanguage(lang: string) {
   locale.value = lang
 }
 
-const flowerImage = "../../public/images/flower.png"
-onMounted(() => {
-  console.log('Current locale:', locale.value)
-  console.log('Available locales:', Object.keys(useI18n().messages.value))
-  console.log('Hero subtitle:', t('hero.subtitle'))
-  console.log('All messages:', useI18n().messages.value)
-})
-</script>
 
+const RSVP_FORM_EMBED_URL = 'https://forms.gle/mLLFahRTtnUHasW69'
+const flowerImage = "/images/flower.png"
+
+</script>
 
 
 <template>
@@ -91,7 +84,7 @@ onMounted(() => {
     <!-- 1. Celebration - BILD VÄNSTER, TEXT HÖGER -->
     <section id="celebration" class="alternating-section">
       <div class="section-image">
-        <img src="../../public/images/vigselPlatsTwo.jpg" alt="The beautiful greenhouse venue at Backagården Café"
+        <img src="/images/vigselPlatsTwo.jpg" alt="The beautiful greenhouse venue at Backagården Café"
           class="img-medium" loading="lazy" />
       </div>
       <div class="section-text">
@@ -209,7 +202,140 @@ onMounted(() => {
   </section>
 </template>
 
-
+<i18n>
+  {
+    "en": {
+      "hero": {
+        "subtitle": "Welcome to the celebration of our love story",
+        "meta": "Malmö · 12 of June 2026"
+      },
+      "nav": {
+        "lovestory": "Our Story",
+        "celebration": "Celebration",
+        "familyspace": "Family space",
+        "language": "Language",
+        "speeches": "Speeches",
+        "dresscode": "Dresscode",
+        "gifts": "Gifts",
+        "cocreate": "Co-creation",
+        "afterglow": "Afterglow",
+        "rsvp": "RSVP"
+      },
+      "lovestory": {
+        "title": "Our Love Story",
+        "text": "Our love story started six years ago..."
+      },
+      "celebration": {
+        "title": "The celebration",
+        "text": "<p>The party and ceremony will take place...</p>"
+      },
+      "familyspace": {
+        "title": "Family space",
+        "text": "Your children are super welcome..."
+      },
+      "language": {
+        "title": "Language",
+        "text": "Since our love story is a mix..."
+      },
+      "speeches": {
+        "title": "Speeches",
+        "text": "A Swedish wedding tradition..."
+      },
+      "dresscode": {
+        "title": "Dresscode",
+        "theme": "Bohemian (countryside chic)",
+        "text": "With this said we would like you..."
+      },
+      "gifts": {
+        "title": "Gifts",
+        "text": "We wish for your presence..."
+      },
+      "cocreate": {
+        "title": "Co-create with us",
+        "text": "We would love for you to feel included..."
+      },
+      "afterglow": {
+        "title": "A three day party - Afterglow and hangout",
+        "text": "Some of you we haven't seen..."
+      },
+      "closingwords": {
+        "text": "Some people say that a relationship...",
+        "closing": "We are so looking forward...",
+        "signature": "With much love, Sandra & Alfonso"
+      },
+      "rsvp": {
+        "title": "RSVP",
+        "intro": "Please fill in the information below...",
+        "loading": "Loading..."
+      }
+    },
+    "es": {
+      "hero": {
+        "subtitle": "Bienvenidas y bienvenidos a la celebración de nuestra historia de amor",
+        "meta": "Malmö · 12 de junio de 2026"
+      },
+      "nav": {
+        "lovestory": "Nuestra historia",
+        "celebration": "Celebración",
+        "familyspace": "Espacio familiar",
+        "language": "Idioma",
+        "speeches": "Discursos",
+        "dresscode": "Código de vestido",
+        "gifts": "Regalos",
+        "cocreate": "Co-crear",
+        "afterglow": "Afterglow",
+        "rsvp": "RSVP"
+      },
+      "lovestory": {
+        "title": "Nuestra historia de amor",
+        "text": "Nuestra historia de amor comenzó hace seis años..."
+      },
+      "celebration": {
+        "title": "La celebración",
+        "text": "<p>La fiesta y la ceremonia tendrán lugar...</p>"
+      },
+      "familyspace": {
+        "title": "Espacio para familias",
+        "text": "¡Sus hijas e hijos son muy bienvenidos..."
+      },
+      "language": {
+        "title": "Idioma",
+        "text": "Como nuestra historia de amor es una mezcla..."
+      },
+      "speeches": {
+        "title": "Discursos",
+        "text": "Habrá posibilidad de hacer un discurso..."
+      },
+      "dresscode": {
+        "title": "Código de vestimenta",
+        "theme": "Bohemio (chic campestre)",
+        "text": "¡Lo que sea que te haga sentir más hermosa/o!..."
+      },
+      "gifts": {
+        "title": "Regalos",
+        "text": "Lo que más deseamos es tu presencia..."
+      },
+      "cocreate": {
+        "title": "Co-crear con nosotras/os",
+        "text": "Nos encantaría que te sintieras parte..."
+      },
+      "afterglow": {
+        "title": "Tres días de celebración – Afterglow y encuentro",
+        "text": "Algunas/os de ustedes han viajado desde lejos..."
+      },
+      "closingwords": {
+        "text": "Algunas personas dicen que una relación...",
+        "closing": "¡Estamos muy emocionados de compartir...",
+        "signature": "Con mucho amor, Sandra & Alfonso"
+      },
+      "rsvp": {
+        "title": "RSVP",
+        "intro": "Por favor completa la información...",
+        "loading": "Cargando..."
+      }
+    }
+  }
+  </i18n>
 
 
 <style src="../assets/style.css"></style>
