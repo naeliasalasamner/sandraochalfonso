@@ -1,4 +1,4 @@
-{
+export default {
   "hero": {
     "subtitle": "Bienvenidas y bienvenidos a la celebración de nuestra historia de amor",
     "meta": "Malmö · 12 de junio de 2026"

@@ -1,4 +1,4 @@
-{
+export default {
   "hero": {
     "subtitle": "Welcome to the celebration of our love story",
     "meta": "Malmö · 12 of June 2026"

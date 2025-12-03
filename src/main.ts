@@ -3,8 +3,8 @@ import App from './App.vue'
 import { createI18n } from 'vue-i18n'
 
 // Importera JSON-filerna direkt från src/locales
-import en from './locales/en.json'
-import es from './locales/es.json'
+import en from './locales/en.ts'
+import es from './locales/es.ts'
 
 const i18n = createI18n({
   legacy: false,
