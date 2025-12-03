@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
 
-const { t, locale } = useI18n()   
+const { locale } = useI18n()
 
 const languages = [
   { code: 'en', label: 'EN' },
@@ -12,12 +12,9 @@ function setLanguage(lang: string) {
   locale.value = lang
 }
 
-
 const RSVP_FORM_EMBED_URL = 'https://forms.gle/mLLFahRTtnUHasW69'
 const flowerImage = "/images/flower.png"
-
 </script>
-
 
 <template>
   <!-- Hero Section -->
@@ -25,8 +22,8 @@ const flowerImage = "/images/flower.png"
     <img src="/images/Sandra&Alfonso.png" alt="Sandra & Alfonso" style="height: 8em; width: auto;"
       class="logo-image" />
     <div class="text-box-content">
-      <h1 class="hero-subtitle">{{ t('hero.subtitle') }}</h1>
-      <p class="hero-meta">{{ t('hero.meta') }}</p>
+      <h1 class="hero-subtitle">{{ $t('hero.subtitle') }}</h1>
+      <p class="hero-meta">{{ $t('hero.meta') }}</p>
     </div>
   </div>
 
@@ -37,16 +34,16 @@ const flowerImage = "/images/flower.png"
   <!-- Navigation -->
   <nav class="main-nav" role="navigation" aria-label="Main navigation">
     <div class="nav-links">
-      <a href="#lovestory">{{ t('nav.lovestory') }}</a>
-      <a href="#celebration">{{ t('nav.celebration') }}</a>
-      <a href="#language">{{ t('nav.language') }}</a>
-      <a href="#speeches">{{ t('nav.speeches') }}</a>
-      <a href="#dresscode">{{ t('nav.dresscode') }}</a>
-      <a href="#gifts">{{ t('nav.gifts') }}</a>
-      <a href="#cocreate">{{ t('nav.cocreate') }}</a>
-      <a href="#familyspace">{{ t('nav.familyspace') }}</a>
-      <a href="#afterglow">{{ t('nav.afterglow') }}</a>
-      <a href="#rsvp">{{ t('nav.rsvp') }}</a>
+      <a href="#lovestory">{{ $t('nav.lovestory') }}</a>
+      <a href="#celebration">{{ $t('nav.celebration') }}</a>
+      <a href="#language">{{ $t('nav.language') }}</a>
+      <a href="#speeches">{{ $t('nav.speeches') }}</a>
+      <a href="#dresscode">{{ $t('nav.dresscode') }}</a>
+      <a href="#gifts">{{ $t('nav.gifts') }}</a>
+      <a href="#cocreate">{{ $t('nav.cocreate') }}</a>
+      <a href="#familyspace">{{ $t('nav.familyspace') }}</a>
+      <a href="#afterglow">{{ $t('nav.afterglow') }}</a>
+      <a href="#rsvp">{{ $t('nav.rsvp') }}</a>
     </div>
 
     <div class="lang-buttons" role="group" aria-label="Language selection">
@@ -69,8 +66,8 @@ const flowerImage = "/images/flower.png"
 
         <!-- Text -->
         <div class="text-wrapper">
-          <h2>{{ t('lovestory.title') }}</h2>
-          <p class="large-text">{{ t('lovestory.text') }}</p>
+          <h2>{{ $t('lovestory.title') }}</h2>
+          <p class="large-text">{{ $t('lovestory.text') }}</p>
         </div>
 
         <!-- Höger sida -->
@@ -88,43 +85,43 @@ const flowerImage = "/images/flower.png"
           class="img-medium" loading="lazy" />
       </div>
       <div class="section-text">
-        <h2>{{ t('celebration.title') }}</h2>
-        <div class="celebration-text" v-html="t('celebration.text')"></div>
+        <h2>{{ $t('celebration.title') }}</h2>
+        <div class="celebration-text" v-html="$t('celebration.text')"></div>
       </div>
     </section>
 
     <!-- 2. Language - TEXT VÄNSTER, BILD HÖGER -->
     <section id="language" class="alternating-section reverse">
       <div class="section-text">
-        <h2>{{ t('language.title') }}</h2>
-        <p>{{ t('language.text') }}</p>
+        <h2>{{ $t('language.title') }}</h2>
+        <p>{{ $t('language.text') }}</p>
       </div>
       <div class="section-image">
-        <img src="../../public/images/goodToKnow.jpg" alt="Wedding ceremony details" class="img-large" loading="lazy" />
+        <img src="/images/goodToKnow.jpg" alt="Wedding ceremony details" class="img-large" loading="lazy" />
       </div>
     </section>
 
     <!-- 3. Speeches - BILD VÄNSTER, TEXT HÖGER -->
     <section id="speeches" class="alternating-section">
       <div class="section-image">
-        <img src="../../public/images/speaches4.jpg" alt="Wedding speeches during dinner" class="img-medium"
+        <img src="/images/speaches4.jpg" alt="Wedding speeches during dinner" class="img-medium"
           loading="lazy" />
       </div>
       <div class="section-text">
-        <h2>{{ t('speeches.title') }}</h2>
-        <p>{{ t('speeches.text') }}</p>
+        <h2>{{ $t('speeches.title') }}</h2>
+        <p>{{ $t('speeches.text') }}</p>
       </div>
     </section>
 
     <!-- 4. Dresscode - TEXT VÄNSTER, BILD HÖGER -->
     <section id="dresscode" class="alternating-section reverse">
       <div class="section-text">
-        <h2>{{ t('dresscode.title') }}</h2>
-        <p class="theme-highlight">{{ t('dresscode.theme') }}</p>
-        <p>{{ t('dresscode.text') }}</p>
+        <h2>{{ $t('dresscode.title') }}</h2>
+        <p class="theme-highlight">{{ $t('dresscode.theme') }}</p>
+        <p>{{ $t('dresscode.text') }}</p>
       </div>
       <div class="section-image">
-        <img src="../../public/images/bohemian.jpg" alt="Bohemian countryside chic wedding attire" class="img-medium"
+        <img src="/images/bohemian.jpg" alt="Bohemian countryside chic wedding attire" class="img-medium"
           loading="lazy" />
       </div>
     </section>
@@ -132,22 +129,22 @@ const flowerImage = "/images/flower.png"
     <!-- 5. Gifts - BILD VÄNSTER, TEXT HÖGER -->
     <section id="gifts" class="alternating-section">
       <div class="section-image">
-        <img src="../../public/images/gifts.jpg" alt="Wedding gifts" class="img-medium" loading="lazy" />
+        <img src="/images/gifts.jpg" alt="Wedding gifts" class="img-medium" loading="lazy" />
       </div>
       <div class="section-text">
-        <h2>{{ t('gifts.title') }}</h2>
-        <p>{{ t('gifts.text') }}</p>
+        <h2>{{ $t('gifts.title') }}</h2>
+        <p>{{ $t('gifts.text') }}</p>
       </div>
     </section>
 
     <!-- 6. Co-create - TEXT VÄNSTER, BILD HÖGER -->
     <section id="cocreate" class="alternating-section reverse">
       <div class="section-text">
-        <h2>{{ t('cocreate.title') }}</h2>
-        <p>{{ t('cocreate.text') }}</p>
+        <h2>{{ $t('cocreate.title') }}</h2>
+        <p>{{ $t('cocreate.text') }}</p>
       </div>
       <div class="section-image">
-        <img src="../../public/images/cocreate.jpg" alt="Co-create the celebration together" class="img-large"
+        <img src="/images/cocreate.jpg" alt="Co-create the celebration together" class="img-large"
           loading="lazy" />
       </div>
     </section>
@@ -155,23 +152,23 @@ const flowerImage = "/images/flower.png"
     <!-- 7. Family Space - BILD VÄNSTER, TEXT HÖGER -->
     <section id="familyspace" class="alternating-section">
       <div class="section-image">
-        <img src="../../public/images/familytree.jpg" alt="Children welcome at the wedding" class="img-small"
+        <img src="/images/familytree.jpg" alt="Children welcome at the wedding" class="img-small"
           loading="lazy" />
       </div>
       <div class="section-text">
-        <h2>{{ t('familyspace.title') }}</h2>
-        <p>{{ t('familyspace.text') }}</p>
+        <h2>{{ $t('familyspace.title') }}</h2>
+        <p>{{ $t('familyspace.text') }}</p>
       </div>
     </section>
 
     <!-- 8. Afterglow - TEXT VÄNSTER, BILD HÖGER -->
     <section id="afterglow" class="alternating-section reverse">
       <div class="section-text">
-        <h2>{{ t('afterglow.title') }}</h2>
-        <p>{{ t('afterglow.text') }}</p>
+        <h2>{{ $t('afterglow.title') }}</h2>
+        <p>{{ $t('afterglow.text') }}</p>
       </div>
       <div class="section-image">
-        <img src="../../public/images/gardenhangout.jpg" alt="Weekend afterglow hangout" class="img-medium"
+        <img src="/images/gardenhangout.jpg" alt="Weekend afterglow hangout" class="img-medium"
           loading="lazy" />
       </div>
     </section>
@@ -179,9 +176,9 @@ const flowerImage = "/images/flower.png"
     <!-- Closing Words Section -->
     <section class="closing-section">
       <div class="section-content centered">
-        <p class="closing-text">{{ t('closingwords.text') }}</p>
-        <p class="closing-message">{{ t('closingwords.closing') }}</p>
-        <p class="signature">{{ t('closingwords.signature') }}</p>
+        <p class="closing-text">{{ $t('closingwords.text') }}</p>
+        <p class="closing-message">{{ $t('closingwords.closing') }}</p>
+        <p class="signature">{{ $t('closingwords.signature') }}</p>
       </div>
     </section>
   </main>
@@ -189,154 +186,18 @@ const flowerImage = "/images/flower.png"
   <!-- RSVP Section -->
   <section id="rsvp" class="rsvp-section">
     <div class="rsvp-container">
-      <h2>{{ t('rsvp.title') }}</h2>
-      <p class="rsvp-intro">{{ t('rsvp.intro') }}</p>
+      <h2>{{ $t('rsvp.title') }}</h2>
+      <p class="rsvp-intro">{{ $t('rsvp.intro') }}</p>
 
       <div class="form-container">
         <iframe :src="RSVP_FORM_EMBED_URL" width="100%" height="1400" frameborder="0" marginheight="0" marginwidth="0"
           title="RSVP Form" loading="lazy">
-          {{ t('rsvp.loading') }}
+          {{ $t('rsvp.loading') }}
         </iframe>
       </div>
     </div>
   </section>
 </template>
-
-<i18n>
-  {
-    "en": {
-      "hero": {
-        "subtitle": "Welcome to the celebration of our love story",
-        "meta": "Malmö · 12 of June 2026"
-      },
-      "nav": {
-        "lovestory": "Our Story",
-        "celebration": "Celebration",
-        "familyspace": "Family space",
-        "language": "Language",
-        "speeches": "Speeches",
-        "dresscode": "Dresscode",
-        "gifts": "Gifts",
-        "cocreate": "Co-creation",
-        "afterglow": "Afterglow",
-        "rsvp": "RSVP"
-      },
-      "lovestory": {
-        "title": "Our Love Story",
-        "text": "Our love story started six years ago..."
-      },
-      "celebration": {
-        "title": "The celebration",
-        "text": "<p>The party and ceremony will take place...</p>"
-      },
-      "familyspace": {
-        "title": "Family space",
-        "text": "Your children are super welcome..."
-      },
-      "language": {
-        "title": "Language",
-        "text": "Since our love story is a mix..."
-      },
-      "speeches": {
-        "title": "Speeches",
-        "text": "A Swedish wedding tradition..."
-      },
-      "dresscode": {
-        "title": "Dresscode",
-        "theme": "Bohemian (countryside chic)",
-        "text": "With this said we would like you..."
-      },
-      "gifts": {
-        "title": "Gifts",
-        "text": "We wish for your presence..."
-      },
-      "cocreate": {
-        "title": "Co-create with us",
-        "text": "We would love for you to feel included..."
-      },
-      "afterglow": {
-        "title": "A three day party - Afterglow and hangout",
-        "text": "Some of you we haven't seen..."
-      },
-      "closingwords": {
-        "text": "Some people say that a relationship...",
-        "closing": "We are so looking forward...",
-        "signature": "With much love, Sandra & Alfonso"
-      },
-      "rsvp": {
-        "title": "RSVP",
-        "intro": "Please fill in the information below...",
-        "loading": "Loading..."
-      }
-    },
-    "es": {
-      "hero": {
-        "subtitle": "Bienvenidas y bienvenidos a la celebración de nuestra historia de amor",
-        "meta": "Malmö · 12 de junio de 2026"
-      },
-      "nav": {
-        "lovestory": "Nuestra historia",
-        "celebration": "Celebración",
-        "familyspace": "Espacio familiar",
-        "language": "Idioma",
-        "speeches": "Discursos",
-        "dresscode": "Código de vestido",
-        "gifts": "Regalos",
-        "cocreate": "Co-crear",
-        "afterglow": "Afterglow",
-        "rsvp": "RSVP"
-      },
-      "lovestory": {
-        "title": "Nuestra historia de amor",
-        "text": "Nuestra historia de amor comenzó hace seis años..."
-      },
-      "celebration": {
-        "title": "La celebración",
-        "text": "<p>La fiesta y la ceremonia tendrán lugar...</p>"
-      },
-      "familyspace": {
-        "title": "Espacio para familias",
-        "text": "¡Sus hijas e hijos son muy bienvenidos..."
-      },
-      "language": {
-        "title": "Idioma",
-        "text": "Como nuestra historia de amor es una mezcla..."
-      },
-      "speeches": {
-        "title": "Discursos",
-        "text": "Habrá posibilidad de hacer un discurso..."
-      },
-      "dresscode": {
-        "title": "Código de vestimenta",
-        "theme": "Bohemio (chic campestre)",
-        "text": "¡Lo que sea que te haga sentir más hermosa/o!..."
-      },
-      "gifts": {
-        "title": "Regalos",
-        "text": "Lo que más deseamos es tu presencia..."
-      },
-      "cocreate": {
-        "title": "Co-crear con nosotras/os",
-        "text": "Nos encantaría que te sintieras parte..."
-      },
-      "afterglow": {
-        "title": "Tres días de celebración – Afterglow y encuentro",
-        "text": "Algunas/os de ustedes han viajado desde lejos..."
-      },
-      "closingwords": {
-        "text": "Algunas personas dicen que una relación...",
-        "closing": "¡Estamos muy emocionados de compartir...",
-        "signature": "Con mucho amor, Sandra & Alfonso"
-      },
-      "rsvp": {
-        "title": "RSVP",
-        "intro": "Por favor completa la información...",
-        "loading": "Cargando..."
-      }
-    }
-  }
-  </i18n>
-
 
 <style src="../assets/style.css"></style>
 
