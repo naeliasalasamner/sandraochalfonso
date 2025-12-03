@@ -1,5 +1,6 @@
 <script setup lang="ts">
 // import { reactive } from 'vue'
+import { onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 const { t, locale } = useI18n()
@@ -15,7 +16,12 @@ function setLanguage(lang: string) {
 }
 
 const flowerImage = "../../public/images/flower.png"
-
+onMounted(() => {
+  console.log('Current locale:', locale.value)
+  console.log('Available locales:', Object.keys(useI18n().messages.value))
+  console.log('Hero subtitle:', t('hero.subtitle'))
+  console.log('All messages:', useI18n().messages.value)
+})
 </script>
 
 
@@ -23,7 +29,7 @@ const flowerImage = "../../public/images/flower.png"
 <template>
   <!-- Hero Section -->
   <div class="text-box">
-    <img src="../../public/images/Sandra&Alfonso.png" alt="Sandra & Alfonso" style="height: 8em; width: auto;"
+    <img src="/images/Sandra&Alfonso.png" alt="Sandra & Alfonso" style="height: 8em; width: auto;"
       class="logo-image" />
     <div class="text-box-content">
       <h1 class="hero-subtitle">{{ t('hero.subtitle') }}</h1>
@@ -32,7 +38,7 @@ const flowerImage = "../../public/images/flower.png"
   </div>
 
   <header class="hero-header">
-    <img src="../../public/images/saal.jpg" alt="Sandra & Alfonso at their wedding venue" />
+    <img src="/images/saal.jpg" alt="Sandra & Alfonso at their wedding venue" />
   </header>
 
   <!-- Navigation -->
