@@ -59,9 +59,6 @@ const flowerImage = "../../public/images/flower.png"
   </nav>
 
   <main class="info-text">
-
-    <!-- Love Story Section -->
-    <!-- Love Story Section -->
     <!-- Love Story Section -->
     <section id="lovestory" class="intro-section">
       <div class="section-content centered flower-arc">
@@ -85,9 +82,9 @@ const flowerImage = "../../public/images/flower.png"
       </div>
     </section>
 
-    <!-- Celebration Section -->
+    <!-- 1. Celebration - BILD VÄNSTER, TEXT HÖGER -->
     <section id="celebration" class="alternating-section">
-      <div class="section-image left">
+      <div class="section-image">
         <img src="../../public/images/vigselPlatsTwo.jpg" alt="The beautiful greenhouse venue at Backagården Café"
           class="img-medium" loading="lazy" />
       </div>
@@ -97,20 +94,20 @@ const flowerImage = "../../public/images/flower.png"
       </div>
     </section>
 
-    <!-- Language Section -->
-    <section id="language" class="alternating-section">
+    <!-- 2. Language - TEXT VÄNSTER, BILD HÖGER -->
+    <section id="language" class="alternating-section reverse">
       <div class="section-text">
-        <img src="../../public/images/goodToKnow.jpg" alt="Wedding ceremony details" class="img-large" loading="lazy" />
         <h2>{{ t('language.title') }}</h2>
         <p>{{ t('language.text') }}</p>
       </div>
-      <div class="section-image right">
+      <div class="section-image">
+        <img src="../../public/images/goodToKnow.jpg" alt="Wedding ceremony details" class="img-large" loading="lazy" />
       </div>
     </section>
 
-    <!-- Speeches Section -->
+    <!-- 3. Speeches - BILD VÄNSTER, TEXT HÖGER -->
     <section id="speeches" class="alternating-section">
-      <div class="section-image left">
+      <div class="section-image">
         <img src="../../public/images/speaches4.jpg" alt="Wedding speeches during dinner" class="img-medium"
           loading="lazy" />
       </div>
@@ -120,22 +117,22 @@ const flowerImage = "../../public/images/flower.png"
       </div>
     </section>
 
-    <!-- Dresscode Section -->
-    <section id="dresscode" class="alternating-section">
+    <!-- 4. Dresscode - TEXT VÄNSTER, BILD HÖGER -->
+    <section id="dresscode" class="alternating-section reverse">
       <div class="section-text">
-        <img src="../../public/images/bohemian.jpg" alt="Bohemian countryside chic wedding attire" class="img-small"
-          loading="lazy" />
         <h2>{{ t('dresscode.title') }}</h2>
         <p class="theme-highlight">{{ t('dresscode.theme') }}</p>
         <p>{{ t('dresscode.text') }}</p>
       </div>
-      <div class="section-image right">
+      <div class="section-image">
+        <img src="../../public/images/bohemian.jpg" alt="Bohemian countryside chic wedding attire" class="img-medium"
+          loading="lazy" />
       </div>
     </section>
 
-    <!-- Gifts Section -->
+    <!-- 5. Gifts - BILD VÄNSTER, TEXT HÖGER -->
     <section id="gifts" class="alternating-section">
-      <div class="section-image left">
+      <div class="section-image">
         <img src="../../public/images/gifts.jpg" alt="Wedding gifts" class="img-medium" loading="lazy" />
       </div>
       <div class="section-text">
@@ -144,22 +141,21 @@ const flowerImage = "../../public/images/flower.png"
       </div>
     </section>
 
-    <!-- Co-create Section -->
-    <section id="cocreate" class="alternating-section">
+    <!-- 6. Co-create - TEXT VÄNSTER, BILD HÖGER -->
+    <section id="cocreate" class="alternating-section reverse">
       <div class="section-text">
-        <img src="../../public/images/cocreate.jpg" alt="Co-create the celebration together" class="img-large"
-          loading="lazy" />
         <h2>{{ t('cocreate.title') }}</h2>
         <p>{{ t('cocreate.text') }}</p>
       </div>
-      <div class="section-image right">
-
+      <div class="section-image">
+        <img src="../../public/images/cocreate.jpg" alt="Co-create the celebration together" class="img-large"
+          loading="lazy" />
       </div>
     </section>
 
-    <!-- Family Space Section -->
+    <!-- 7. Family Space - BILD VÄNSTER, TEXT HÖGER -->
     <section id="familyspace" class="alternating-section">
-      <div class="section-image left">
+      <div class="section-image">
         <img src="../../public/images/familytree.jpg" alt="Children welcome at the wedding" class="img-small"
           loading="lazy" />
       </div>
@@ -169,15 +165,15 @@ const flowerImage = "../../public/images/flower.png"
       </div>
     </section>
 
-    <!-- Afterglow Section -->
-    <section id="afterglow" class="alternating-section">
-      <div class="section-image right">
-        <img src="../../public/images/gardenhangout.jpg" alt="Weekend afterglow hangout" class="img-medium"
-          loading="lazy" />
-      </div>
+    <!-- 8. Afterglow - TEXT VÄNSTER, BILD HÖGER -->
+    <section id="afterglow" class="alternating-section reverse">
       <div class="section-text">
         <h2>{{ t('afterglow.title') }}</h2>
         <p>{{ t('afterglow.text') }}</p>
+      </div>
+      <div class="section-image">
+        <img src="../../public/images/gardenhangout.jpg" alt="Weekend afterglow hangout" class="img-medium"
+          loading="lazy" />
       </div>
     </section>
 
@@ -206,6 +202,7 @@ const flowerImage = "../../public/images/flower.png"
     </div>
   </section>
 </template>
+
 
 
 

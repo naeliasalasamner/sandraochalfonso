@@ -404,4 +404,42 @@
       transition-duration: 0.01ms !important;
     }
   }
+  @media (max-width: 968px) {
+    .alternating-section {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      padding: 3rem 1.5rem;
+    }
+    
+    /* Bild alltid först på mobil */
+    .alternating-section .section-image,
+    .alternating-section.reverse .section-image {
+      order: 1;
+    }
+    
+    .alternating-section .section-text,
+    .alternating-section.reverse .section-text {
+      order: 2;
+    }
+
+      /* Centrera bildcontainer */
+      .section-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    
+      /* Centrera själva bilden */
+      .section-image img {
+        margin: 0 auto;
+        display: block;
+      }
+    
+  }
   
+  @media (max-width: 640px) {
+    .alternating-section {
+      padding: 2rem 1rem;
+      gap: 1rem;
+    }
+  }
