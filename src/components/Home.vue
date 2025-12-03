@@ -6,17 +6,6 @@ const { t, locale } = useI18n()
 
 const RSVP_FORM_EMBED_URL = 'https://forms.gle/mLLFahRTtnUHasW69'
 
-// const form = reactive({
-//   name: '',
-//   allergies: '',
-//   specialDiet: '',
-//   drink: '',
-//   busRide: '',
-//   musicWishes: ['', '', ''],
-//   sleepOver: '',
-//   deadline: ''
-// })
-
 const languages = [
   { code: 'en', label: 'EN' },
   { code: 'es', label: 'ES' }]
@@ -25,99 +14,129 @@ function setLanguage(lang: string) {
   locale.value = lang
 }
 
+const flowerImage = "../../public/images/flower.png"
+
 </script>
 
 
+
 <template>
-   <div class="text-box">
-    <img
-      src="../../public/images/Sandra&Alfonso.png"
-      alt="Sandra & Alfonso"
-      style="height: 8em; width: auto;"
-    />
+  <!-- Hero Section -->
+  <div class="text-box">
+    <img src="../../public/images/Sandra&Alfonso.png" alt="Sandra & Alfonso" style="height: 8em; width: auto;"
+      class="logo-image" />
     <div class="text-box-content">
-      <p class="hero-subtitle">{{ t('hero.subtitle') }}</p>
+      <h1 class="hero-subtitle">{{ t('hero.subtitle') }}</h1>
       <p class="hero-meta">{{ t('hero.meta') }}</p>
     </div>
   </div>
 
   <header class="hero-header">
-    <img src="../../public/images/saal.jpg" alt="Sandra & Alfonso" />
+    <img src="../../public/images/saal.jpg" alt="Sandra & Alfonso at their wedding venue" />
   </header>
 
-  <nav>
+  <!-- Navigation -->
+  <nav class="main-nav" role="navigation" aria-label="Main navigation">
     <div class="nav-links">
+      <a href="#lovestory">{{ t('nav.lovestory') }}</a>
       <a href="#celebration">{{ t('nav.celebration') }}</a>
-      <a href="#familyspace">{{ t('nav.familyspace') }}</a>
       <a href="#language">{{ t('nav.language') }}</a>
+      <a href="#speeches">{{ t('nav.speeches') }}</a>
       <a href="#dresscode">{{ t('nav.dresscode') }}</a>
       <a href="#gifts">{{ t('nav.gifts') }}</a>
       <a href="#cocreate">{{ t('nav.cocreate') }}</a>
-      <a href="#RSVP">{{ t('nav.rsvp') }}</a>
+      <a href="#familyspace">{{ t('nav.familyspace') }}</a>
+      <a href="#afterglow">{{ t('nav.afterglow') }}</a>
+      <a href="#rsvp">{{ t('nav.rsvp') }}</a>
     </div>
-    
-    <div class="lang-buttons">
-      <button
-        v-for="lang in languages"
-        :key="lang.code"
-        :class="{ active: locale === lang.code }"
-        @click="setLanguage(lang.code)"
-      >
+
+    <div class="lang-buttons" role="group" aria-label="Language selection">
+      <button v-for="lang in languages" :key="lang.code" :class="{ active: locale === lang.code }"
+        :aria-pressed="locale === lang.code" @click="setLanguage(lang.code)">
         {{ lang.label }}
       </button>
     </div>
   </nav>
 
-  <div class="info-text">
-    <!-- Section 1: Bild VÄNSTER, text höger -->
-    <section id="celebration" class="alternating-section">
-  <div class="section-image left">
-    <img src="../../public/images/vigselPlatsTwo.jpg" alt="Sandra & Alfonso" class="img-medium" />
-  </div>
-  <div class="section-text">
-    <h2>{{ t('celebration.title') }}</h2>
-    <div class="celebration-text" v-html="t('celebration.text')"></div>
-  </div>
-</section>
+  <main class="info-text">
 
+    <!-- Love Story Section -->
+    <!-- Love Story Section -->
+    <!-- Love Story Section -->
+    <section id="lovestory" class="intro-section">
+      <div class="section-content centered flower-arc">
+        <!-- Vänster sida -->
+        <img :src="flowerImage" alt="" class="flower-arc-item f1" />
+        <img :src="flowerImage" alt="" class="flower-arc-item f2" />
+        <img :src="flowerImage" alt="" class="flower-arc-item f3" />
+        <img :src="flowerImage" alt="" class="flower-arc-item f4" />
 
-    <!-- Section 2: Text vänster, bild HÖGER -->
-    <section id="familyspace" class="alternating-section">
-      <div class="section-text">
-        <h2>{{ t('familyspace.title') }}</h2>
-        <p>{{ t('familyspace.text') }}</p>
-      </div>
-      <div class="section-image right">
-        <img src="../../public/images/barn.jpg" alt="barn" class="img-small" />
+        <!-- Text -->
+        <div class="text-wrapper">
+          <h2>{{ t('lovestory.title') }}</h2>
+          <p class="large-text">{{ t('lovestory.text') }}</p>
+        </div>
+
+        <!-- Höger sida -->
+        <img :src="flowerImage" alt="" class="flower-arc-item f5" />
+        <img :src="flowerImage" alt="" class="flower-arc-item f6" />
+        <img :src="flowerImage" alt="" class="flower-arc-item f7" />
+        <img :src="flowerImage" alt="" class="flower-arc-item f8" />
       </div>
     </section>
 
-    <!-- Section 3: Bild VÄNSTER, text höger -->
-    <section id="language" class="alternating-section">
+    <!-- Celebration Section -->
+    <section id="celebration" class="alternating-section">
       <div class="section-image left">
-        <img src="../../public/images/goodToKnow.jpg" alt="Sandra & Alfonso" class="img-large" />
+        <img src="../../public/images/vigselPlatsTwo.jpg" alt="The beautiful greenhouse venue at Backagården Café"
+          class="img-medium" loading="lazy" />
       </div>
       <div class="section-text">
+        <h2>{{ t('celebration.title') }}</h2>
+        <div class="celebration-text" v-html="t('celebration.text')"></div>
+      </div>
+    </section>
+
+    <!-- Language Section -->
+    <section id="language" class="alternating-section">
+      <div class="section-text">
+        <img src="../../public/images/goodToKnow.jpg" alt="Wedding ceremony details" class="img-large" loading="lazy" />
         <h2>{{ t('language.title') }}</h2>
         <p>{{ t('language.text') }}</p>
       </div>
+      <div class="section-image right">
+      </div>
     </section>
 
-    <!-- Section 4: Text vänster, bild HÖGER -->
+    <!-- Speeches Section -->
+    <section id="speeches" class="alternating-section">
+      <div class="section-image left">
+        <img src="../../public/images/speaches4.jpg" alt="Wedding speeches during dinner" class="img-medium"
+          loading="lazy" />
+      </div>
+      <div class="section-text">
+        <h2>{{ t('speeches.title') }}</h2>
+        <p>{{ t('speeches.text') }}</p>
+      </div>
+    </section>
+
+    <!-- Dresscode Section -->
     <section id="dresscode" class="alternating-section">
       <div class="section-text">
+        <img src="../../public/images/bohemian.jpg" alt="Bohemian countryside chic wedding attire" class="img-small"
+          loading="lazy" />
         <h2>{{ t('dresscode.title') }}</h2>
+        <p class="theme-highlight">{{ t('dresscode.theme') }}</p>
         <p>{{ t('dresscode.text') }}</p>
       </div>
       <div class="section-image right">
-        <img src="../../public/images/dresscode.jpeg" alt="Sandra & Alfonso" class="img-small" />
       </div>
     </section>
 
-    <!-- Section 5: Bild VÄNSTER, text höger -->
+    <!-- Gifts Section -->
     <section id="gifts" class="alternating-section">
       <div class="section-image left">
-        <img src="../../public/images/gifts.jpg" alt="Sandra & Alfonso" class="img-medium" />
+        <img src="../../public/images/gifts.jpg" alt="Wedding gifts" class="img-medium" loading="lazy" />
       </div>
       <div class="section-text">
         <h2>{{ t('gifts.title') }}</h2>
@@ -125,39 +144,73 @@ function setLanguage(lang: string) {
       </div>
     </section>
 
-    <!-- Section 6: Text vänster, bild HÖGER -->
+    <!-- Co-create Section -->
     <section id="cocreate" class="alternating-section">
       <div class="section-text">
+        <img src="../../public/images/cocreate.jpg" alt="Co-create the celebration together" class="img-large"
+          loading="lazy" />
         <h2>{{ t('cocreate.title') }}</h2>
         <p>{{ t('cocreate.text') }}</p>
       </div>
       <div class="section-image right">
-        <img src="../../public/images/cocreate.jpg" alt="Sandra & Alfonso" class="img-large" />
+
       </div>
     </section>
-  </div>
 
-<section id="RSVP" class="rsvp-section"> 
-   <h2>{{ t('rsvp.title') }}</h2> 
-    
-   <div class="form-container">
-      <iframe 
-        :src="RSVP_FORM_EMBED_URL"
-        width="100%" 
-        height="1400" 
-        frameborder="0" 
-        marginheight="0" 
-        marginwidth="0"
-      >
-        Läser in formulär…
-      </iframe>
+    <!-- Family Space Section -->
+    <section id="familyspace" class="alternating-section">
+      <div class="section-image left">
+        <img src="../../public/images/familytree.jpg" alt="Children welcome at the wedding" class="img-small"
+          loading="lazy" />
+      </div>
+      <div class="section-text">
+        <h2>{{ t('familyspace.title') }}</h2>
+        <p>{{ t('familyspace.text') }}</p>
+      </div>
+    </section>
+
+    <!-- Afterglow Section -->
+    <section id="afterglow" class="alternating-section">
+      <div class="section-image right">
+        <img src="../../public/images/gardenhangout.jpg" alt="Weekend afterglow hangout" class="img-medium"
+          loading="lazy" />
+      </div>
+      <div class="section-text">
+        <h2>{{ t('afterglow.title') }}</h2>
+        <p>{{ t('afterglow.text') }}</p>
+      </div>
+    </section>
+
+    <!-- Closing Words Section -->
+    <section class="closing-section">
+      <div class="section-content centered">
+        <p class="closing-text">{{ t('closingwords.text') }}</p>
+        <p class="closing-message">{{ t('closingwords.closing') }}</p>
+        <p class="signature">{{ t('closingwords.signature') }}</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- RSVP Section -->
+  <section id="rsvp" class="rsvp-section">
+    <div class="rsvp-container">
+      <h2>{{ t('rsvp.title') }}</h2>
+      <p class="rsvp-intro">{{ t('rsvp.intro') }}</p>
+
+      <div class="form-container">
+        <iframe :src="RSVP_FORM_EMBED_URL" width="100%" height="1400" frameborder="0" marginheight="0" marginwidth="0"
+          title="RSVP Form" loading="lazy">
+          {{ t('rsvp.loading') }}
+        </iframe>
+      </div>
     </div>
-  </section> 
+  </section>
 </template>
 
 
 
 <style src="../assets/style.css"></style>
+
 <style scoped>
 .celebration-text :deep(ul) {
   list-style: none;
@@ -171,5 +224,96 @@ function setLanguage(lang: string) {
 
 .celebration-text :deep(li::marker) {
   display: none;
+}
+
+.flower-arc {
+  position: relative;
+  padding: 4rem 2rem;
+}
+
+.text-wrapper {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.flower-arc-item {
+  position: absolute;
+  width: 45px;
+  height: auto;
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+/* VÄNSTER BÅGE */
+.f1 {
+  top: 5%;
+  left: 10%;
+  transform: rotate(-30deg);
+  width: 40px;
+}
+
+.f2 {
+  top: 25%;
+  left: 3%;
+  transform: rotate(-15deg);
+  width: 50px;
+}
+
+.f3 {
+  top: 50%;
+  left: 5%;
+  transform: rotate(-5deg);
+  width: 48px;
+}
+
+.f4 {
+  top: 75%;
+  left: 12%;
+  transform: rotate(-20deg);
+  width: 42px;
+}
+
+/* HÖGER BÅGE */
+.f5 {
+  top: 15%;
+  right: 8%;
+  transform: rotate(35deg);
+  width: 38px;
+}
+
+.f6 {
+  top: 35%;
+  right: 2%;
+  transform: rotate(20deg);
+  width: 52px;
+}
+
+.f7 {
+  top: 60%;
+  right: 6%;
+  transform: rotate(10deg);
+  width: 46px;
+}
+
+.f8 {
+  top: 80%;
+  right: 15%;
+  transform: rotate(25deg);
+  width: 40px;
+}
+
+@media (max-width: 768px) {
+  .f2,
+  .f3,
+  .f6,
+  .f7 {
+    display: none;
+  }
+
+  .flower-arc-item {
+    width: 35px !important;
+  }
 }
 </style>
