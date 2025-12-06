@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
 
-const { locale } = useI18n()
+const { locale } = useI18n({ useScope: 'global' })
 
 const languages = [
   { code: 'en', label: 'EN' },
@@ -11,7 +11,7 @@ const languages = [
 function setLanguage(lang: string) {
   locale.value = lang
 }
-
+console.log('locale now:', locale.value)
 const RSVP_FORM_EMBED_URL = 'https://forms.gle/mLLFahRTtnUHasW69'
 const flowerImage = "/images/flower.png"
 </script>
