@@ -59,7 +59,7 @@ export default {
   },
   "rsvp": {
     "title": "RSVP",
-    "intro": "Please fill in the information below, which also works as a confirmation of your attendance, so we can organize the fiesta according to everyone's needs by latest by 1st of February 2026:",
+    "intro": "Please fill in the information below, which also works as a confirmation of your attendance, so we can organize the fiesta according to everyone's needs by latest by 1st of February 2026",
     "form": {
       "name": "Name",
       "allergies": "Allergies",

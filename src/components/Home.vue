@@ -174,13 +174,27 @@ const flowerImage = "/images/flower.png"
     </section>
 
     <!-- Closing Words Section -->
-    <section class="closing-section">
-      <div class="section-content centered">
-        <p class="closing-text">{{ $t('closingwords.text') }}</p>
-        <p class="closing-message">{{ $t('closingwords.closing') }}</p>
-        <p class="signature">{{ $t('closingwords.signature') }}</p>
-      </div>
-    </section>
+    <section class="closing-section flower-arc">
+  <!-- Vänster sida -->
+  <img src="/images/flower.png" alt="" class="flower-arc-item f1" />
+  <img src="/images/flower.png" alt="" class="flower-arc-item f2" />
+  <img src="/images/flower.png" alt="" class="flower-arc-item f3" />
+  <img src="/images/flower.png" alt="" class="flower-arc-item f4" />
+
+  <!-- Text -->
+  <div class="text-wrapper">
+    <p class="closing-text">{{ $t('closingwords.text') }}</p>
+    <p class="closing-message">{{ $t('closingwords.closing') }}</p>
+    <p class="signature">{{ $t('closingwords.signature') }}</p>
+  </div>
+
+  <!-- Höger sida -->
+  <img src="/images/flower.png" alt="" class="flower-arc-item f5" />
+  <img src="/images/flower.png" alt="" class="flower-arc-item f6" />
+  <img src="/images/flower.png" alt="" class="flower-arc-item f7" />
+  <img src="/images/flower.png" alt="" class="flower-arc-item f8" />
+</section>
+
   </main>
 
   <!-- RSVP Section -->
