@@ -7,22 +7,21 @@ const languages = [
   { code: 'en', label: 'EN' },
   { code: 'es', label: 'ES' }
 ]
-
+function formatSpeeches(text: string) {
+  return text.replace("[toastmaster]", '<span class="toastmaster">toastmaster</span>');
+}
 function setLanguage(lang: string) {
   locale.value = lang
 }
 console.log('locale now:', locale.value)
 const RSVP_FORM_EMBED_URL = 'https://forms.gle/mLLFahRTtnUHasW69'
-const flowerImage = "/images/flower.png"
+// const flowerImage = "/images/flower.png"
 </script>
 
 <template>
-  <!-- Hero Section -->
   <div class="text-box">
-    <img src="/images/Sandra&Alfonso.png" alt="Sandra & Alfonso" style="height: 8em; width: auto;"
-      class="logo-image" />
     <div class="text-box-content">
-      <h1 class="hero-subtitle">{{ $t('hero.subtitle') }}</h1>
+      <h3 class="hero-subtitle">{{ $t('hero.subtitle') }}</h3>
       <p class="hero-meta">{{ $t('hero.meta') }}</p>
     </div>
   </div>
@@ -59,22 +58,11 @@ const flowerImage = "/images/flower.png"
     <section id="lovestory" class="intro-section">
       <div class="section-content centered flower-arc">
         <!-- Vänster sida -->
-        <img :src="flowerImage" alt="" class="flower-arc-item f1" />
-        <img :src="flowerImage" alt="" class="flower-arc-item f2" />
-        <img :src="flowerImage" alt="" class="flower-arc-item f3" />
-        <img :src="flowerImage" alt="" class="flower-arc-item f4" />
-
         <!-- Text -->
         <div class="text-wrapper">
           <h2>{{ $t('lovestory.title') }}</h2>
           <p class="large-text">{{ $t('lovestory.text') }}</p>
         </div>
-
-        <!-- Höger sida -->
-        <img :src="flowerImage" alt="" class="flower-arc-item f5" />
-        <img :src="flowerImage" alt="" class="flower-arc-item f6" />
-        <img :src="flowerImage" alt="" class="flower-arc-item f7" />
-        <img :src="flowerImage" alt="" class="flower-arc-item f8" />
       </div>
     </section>
 
@@ -97,7 +85,7 @@ const flowerImage = "/images/flower.png"
         <p>{{ $t('language.text') }}</p>
       </div>
       <div class="section-image">
-        <img src="/images/goodToKnow.jpg" alt="Wedding ceremony details" class="img-large" loading="lazy" />
+        <img src="/images/goodToKnow.jpg" alt="Wedding ceremony details" class="img-medium" loading="lazy" />
       </div>
     </section>
 
@@ -109,7 +97,9 @@ const flowerImage = "/images/flower.png"
       </div>
       <div class="section-text">
         <h2>{{ $t('speeches.title') }}</h2>
-        <p>{{ $t('speeches.text') }}</p>
+        <!-- <p>{{ $t('speeches.text') }}</p> -->
+         <p v-html="formatSpeeches($t('speeches.text'))"></p>
+
       </div>
     </section>
 
@@ -174,7 +164,9 @@ const flowerImage = "/images/flower.png"
     </section>
 
     <!-- Closing Words Section -->
-    <section class="closing-section flower-arc">
+  <!-- Closing Words Section -->
+<section class="closing-section flower-arc">
+
   <!-- Vänster sida -->
   <img src="/images/flower.png" alt="" class="flower-arc-item f1" />
   <img src="/images/flower.png" alt="" class="flower-arc-item f2" />
@@ -183,9 +175,31 @@ const flowerImage = "/images/flower.png"
 
   <!-- Text -->
   <div class="text-wrapper">
-    <p class="closing-text">{{ $t('closingwords.text') }}</p>
-    <p class="closing-message">{{ $t('closingwords.closing') }}</p>
-    <p class="signature">{{ $t('closingwords.signature') }}</p>
+
+    <!-- Övre streck -->
+<div class="closing-divider"></div>
+
+    <!-- Kursiv citattext -->
+    <p class="closing-quote">"{{ $t('closingwords.text') }}"</p>
+
+    <!-- Nedre streck -->
+<div class="closing-divider"></div>
+
+    <!-- Övrig text -->
+   <!-- <div class="closing-message">
+  <p>{{ $t('closingwords.closing') }}</p>
+  <p class="signature">{{ $t('closingwords.signature') }}</p>
+  <p class="signature-name">{{ $t('closingwords.name') }}</p>
+</div> -->
+<div class="closing-message">
+  <p>{{ $t('closingwords.closing') }}</p>
+  <p class="signature-line">
+    {{ $t('closingwords.signature') }} {{ $t('closingwords.name') }}
+  </p>
+</div>
+
+
+
   </div>
 
   <!-- Höger sida -->
@@ -194,6 +208,7 @@ const flowerImage = "/images/flower.png"
   <img src="/images/flower.png" alt="" class="flower-arc-item f7" />
   <img src="/images/flower.png" alt="" class="flower-arc-item f8" />
 </section>
+
 
   </main>
 
