@@ -1,6 +1,6 @@
 export default {
   hero: {
-    subtitle: "Bienvenidas y bienvenidos a la celebración de nuestra historia de amor",
+    subtitle: "Bienvenidos a la celebración de nuestra historia de amor",
     meta: "Malmö · 12 de junio de 2026"
   },
 
@@ -81,10 +81,10 @@ export default {
   
   closingwords: {
     text:
-      "Algunas personas dicen que una relación requiere mucho trabajo, y un matrimonio aún más. Hemos reflexionado sobre esto ahora que estamos a punto de casarnos. Tal vez no sea el amor lo que necesita trabajo, sino la relación que lo sostiene: dedicación, comprensión, compromiso, construcción conjunta, renovación y forma. Pero quizá el amor sea algo simple, que surge espontáneamente. Y tal vez solo necesitemos a la otra persona para recordarlo, volver al corazón y dejar que el amor nos toque.",
-    closing:
+      "Hay quien dice que una relación requiere mucho trabajo, y un matrimonio todavía más. Hemos estado reflexionando sobre esto ahora que estamos a punto de casarnos. Tal vez no sea el amor lo que necesita trabajo, sino los pilares que lo sostienen, la dedicación, la comprensión, el compromiso, el saber renovarse y adaptarse a una nueva forma. Pero quizá el amor sea algo simple, que surge de manera espontánea. Y tal vez solo necesitemos a la otra persona para recordárnoslo, para volver al corazón y dejar que el amor nos emocione.",
+    closing:  
       "Tenemos muchas ganas de compartir esta celebración con todas y todos ustedes, y nos sentimos profundamente agradecidos por tener amistades y familia tan maravillosas. ¡Esperamos que sea un día hermoso, emocionante, salvaje y divertido!",
-    signature: "Con mucho amor,<br>Sandra & Alfonso"
+    signature: "Con mucho amor,"
   },
 
   rsvp: {
